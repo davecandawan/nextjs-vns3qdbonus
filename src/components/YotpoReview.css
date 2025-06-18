@@ -1,0 +1,33 @@
+.carousel-containeryotpo{overflow:hidden;max-width:800px;margin:auto;position:relative}
+      .carouselyotpo{display:flex;transition:transform .5s ease-in-out;gap:20px}
+      .reviewyotpo{flex:0 0 calc(33.35% - 20px);box-sizing:border-box;padding:20px;text-align:center;border:1px solid #ddd;border-radius:10px;background-color:#ffffff}
+      .product-imgyotpo{width:50px;height:50px;margin-bottom:10px}
+      .review-contentyotpo h4{margin:5px 0}
+      .review-contentyotpo p{margin:10px 0}
+      .reviewnameyotpo{display:flex;font-size:11px;justify-content:space-around;align-items:center}
+      .staryotpo{font-size:25px;color:orange;letter-spacing:1px;text-align:left}
+      .star1yotpo{font-size:25px;color:orange;text-align:left;padding-right:5px;font-family: "Noto Sans Symbols", Arial, sans-serif;}
+      .revtitleyotpo{font-size:15px;font-weight:600;padding-top:10px}
+      .revbodyyotpo{font-size:13px;line-height:20px}
+      .revdescriptionyotpo{display:flex;flex-direction:column}
+      .productimgyotpo{display:flex;align-items:center;justify-content:center}
+      .reviewtotalyotpo{display:flex;align-items:center}
+      .textmarginyotpo{margin-left:50px !important;margin-right:50px !important}
+      .arrowleftyotpo{position:absolute;top:45%;left:10px;transform:translateY(-50%);background-color:rgba(0,0,0,.1);color:#fff;border:none;padding:10px;cursor:pointer;z-index:10;width:40px;height:40px;display:flex;justify-content:center;align-items:center;border-radius:50%}
+      .arrowrightyotpo{position:absolute;top:45%;right:30px;transform:translateY(-50%);background-color:rgba(0,0,0,.1);color:#fff;border:none;padding:10px;cursor:pointer;z-index:10;width:40px;height:40px;display:flex;justify-content:center;align-items:center;border-radius:50%}
+      .arrowleftyotpo:hover {background-color: rgba(0, 0, 0, 0.4);}
+      .arrowrightyotpo:hover {background-color: rgba(0, 0, 0, 0.4);}
+      .reviewheader{font-size: 38px;font-weight: 700;}
+      .color-orange{color:#f16500}
+
+      @media (max-width: 768px) {
+       .carouselyotpo {display: flex;transition: transform 0.5s ease-in-out;padding: 0px 20px 0px 20px;}
+       /* .reviewyotpo {width: 250px;} */
+       .reviewyotpo {flex: 0 0 100%;margin: 0;box-sizing: border-box;}
+       .textmarginyotpo{margin-left:10px !important;margin-right:10px !important}
+       .reviewtotalyotpo{padding-left: 20px;}
+       .arrowleftyotpo{display: none;}
+       .arrowrightyotpo{display: none;} 
+       .reviewheader{font-size: 23px;}
+       .yotpo{width: 100%;}
+      }

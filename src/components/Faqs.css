@@ -1,0 +1,11 @@
+.faq{max-width:100%;margin:0 auto;padding:20px}
+      .faq-item{margin-bottom:10px}
+      .faq-question{display:flex;justify-content:space-between;align-items:center;background-color:#f2f2f2;padding:10px;cursor:pointer;font-size:20px;text-align:left;color:#007bff;font-weight:700}
+      .faq-answer{display:none;padding:10px;background-color:#e9e9e9;border:1px solid #ddd;text-align:left;font-size:20px;color:#212529}
+      .faq-answer.visible {
+        display: block;
+      }
+      .faqs{
+        width: 100%;
+        margin: auto;
+      }

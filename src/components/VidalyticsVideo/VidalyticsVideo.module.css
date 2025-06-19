@@ -1,0 +1,68 @@
+.videoContainer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+  aspect-ratio: 16/9; /* Modern way to maintain aspect ratio */
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px; /* Ensure minimum height */
+}
+
+/* Ensure the iframe is properly layered */
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #000;
+}
+
+/* Remove the loading animation as it might interfere */
+.videoWrapper::before {
+  display: none;
+}
+
+/* Hide the loading state when the video is loaded */
+.videoWrapper.loaded::before {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .videoContainer {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .videoWrapper {
+    padding-top: 56.25%; /* Maintain aspect ratio on mobile */
+  }
+}
+
+/* Accessibility improvements */
+.videoContainer:focus-within {
+  outline: 3px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+/* Fallback for when JavaScript is disabled */
+.noJsMessage {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  margin: 1rem 0;
+  color: #6c757d;
+}

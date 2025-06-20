@@ -63,7 +63,7 @@ const Content: React.FC<ContentProps> = ({
             priority
           />
         </div>
-        <div className={styles.header}>
+        <div className={styles.header01}>
           <span className={`${styles.yellow} ${styles.headertext}`}>
             Discover Why Over 175,234 Americans Are Carrying With VNSH…
           </span>
@@ -199,76 +199,30 @@ const Content: React.FC<ContentProps> = ({
               />
             </div>
           </div>
-          <div className={`${styles.btnDiv} ${styles.pulse}`}>
-            <button className={styles.btn}>{buttonText}</button>
-          </div>
-          <article>
-            <p>
-              <span className={styles.belowbuttontext}>
-                60 Days to Try It Yourself… Love It Or You Don’t Pay a Dime!
-              </span>
-            </p>
-          </article>
-          <p className={styles.paragraphMargin}>
-            Where kydex can be rigid and uncomfortable... and leather is sweaty and sticky, the VNSH
-            holster is ultra-comfortable because it uses a custom blend of sweat-wicking fabrics
-            that we call "yoga pant" fabric to help you stay cool and dry in the nastiest
-            environments.
-          </p>
-          <p className={styles.paragraphMargin}>
-            Not to mention the waist band is made from a crazy comfy velcro <b>that will not</b>{' '}
-            snag on shirts, waistbands and the like. The VNSH holster is superior to leather and
-            kydex.
-          </p>
-          <p className={styles.paragraphMargin}>
-            And because of its unique no-clip, no hook design,{' '}
-            <b>you can comfortably configure the holster any which way you want.</b>
-          </p>
-          <p className={styles.paragraphMargin}>Want to carry at 3 o'clock? Go for it.</p>
-          <p className={styles.paragraphMargin}>Like pure appendix carry? That's easy.</p>
-          <p className={styles.paragraphMargin}>
-            Does carrying in the small of your back suit you best? Well, it works there too.
-          </p>
-          <p className={styles.paragraphMargin}>
-            You can even carry it up high on your chest or side thanks to the adjustable strap
-            (which extends up to 48 inches and 68 inches with our extension strap).
-          </p>
-          <p className={styles.paragraphMargin}>
-            Also, we combined that awesome "yoga pant" fabric with rugged 1000D Cordura so it will
-            withstand years and years of abuse without showing a sign of distress.
-          </p>
-          <p className={styles.paragraphMargin}>
-            And best of all it features an <b>enhanced trigger guard</b>. Yes, it's true, the VNSH
-            holster is the only bellyband on the planet with a dedicated trigger guard built in. A
-            solid but flexible piece of .7mm plastic resits in the custom-built holster to prevent{' '}
-            <b>anything</b> from accidentally causing a negligent discharge.
-          </p>
-          <p className={styles.paragraphMargin}>
-            Not to mention the retention is rock-solid... <b>but still incredibly easy to draw.</b>{' '}
-            Never fear that your gun will fall out, or that a criminal will be able to disarm you.
-          </p>
         </article>
-        <div className={styles.holster3}>
-          <Image
-            src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/BlackHolsterDesktop2.webp"
-            alt="VNSH Holster in use"
-            className={styles.heroImage}
-            width={650}
-            height={400}
-          />
-        </div>
+
         <div className={`${styles.btnDiv} ${styles.pulse}`}>
           <button className={styles.btn}>{buttonText}</button>
         </div>
+        <article>
+          <p>
+            <span className={styles.belowbuttontext}>
+              60 Days to Try It Yourself… Love It Or You Don’t Pay a Dime!
+            </span>
+          </p>
+        </article>
         <div className={styles.subheader}>
           <span className={`${styles.subheadertext} ${styles.orange}`}>
-            Crazy Holiday Deal! <br />
-            <span className={styles.red}>Buy 1 Holster, Get 1 FREE!</span>
+            <em>
+              <span className={styles.red}>Limited FREE Bonus Gift (Worth $50)</span>
+            </em>{' '}
+            Next 127 Buyers Get a{' '}
+            <span className={styles.red}>Complimentary VNSH QuickLock Safe!</span>
           </span>
         </div>
-        <div className={styles.pad1}>
+        <div className={`${styles.pad1} ${styles.imgCenter}`}>
           <Image
-            src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/BlackHolsterDesktop4.webp"
+            src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/quicklockbonus_new.png?v=1734018658"
             alt="VNSH Holster deal"
             className={styles.heroImage}
             width={1120}
@@ -277,34 +231,102 @@ const Content: React.FC<ContentProps> = ({
         </div>
         <article className={styles.bodymsg}>
           <p className={styles.paragraphMargin}>
-            As you've seen... people{' '}
-            <em>
-              <b>love</b>
-            </em>{' '}
-            the VNSH Holster.
+            For a short time, we’re giving out our bestselling lockbox –{' '}
+            <b>
+              <em>the VNSH QuickLock</em>
+            </b>{' '}
+            –{' '}
+            <span className={styles.highlight}>
+              100% FREE with every holster order (from this page ONLY)!
+            </span>
+          </p>
+          <div className={styles.featuresContainer}>
+            <div className={styles.featureItem}>
+              <div className={styles.featureContent}>
+                <li className={styles.checkmarkItem1}>
+                  <b>Ultra Secure, But Lightning Fast Access</b> - a simple but robust key lock
+                  gives you total peace-of-mind that{' '}
+                  <b>
+                    <em>nobody</em>
+                  </b>{' '}
+                  is getting inside but you. Yet you're always seconds away from having your weapon
+                  in-hand.
+                </li>
+              </div>
+              <div className={styles.featureImage}>
+                <img
+                  src="https://vnsh.com/cdn/shop/files/VNSH_Gun_Safe_4_e97c9ad2-f60f-4f40-a833-7a84ff0ff05e_500x.jpg"
+                  alt="QuickLock secure access"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div className={styles.featureItem}>
+              <div className={styles.featureContent}>
+                <li className={styles.checkmarkItem1}>
+                  <b>Great for Your Car, Nightstand, or Really Anywhere</b> - small enough to easily
+                  fit in a bedroom drawer or cabinet, you can also toss it in your backpack then
+                  easily stow in any car glove box or console.
+                </li>
+              </div>
+              <div className={styles.featureImage}>
+                <img
+                  src="https://vnsh.com/cdn/shop/files/VNSH_Gun_Safe_3_3d925ef1-b8b6-40ee-acd9-8a2cc9785a0f_500x.jpg"
+                  alt="QuickLock in use"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <div className={styles.featureItem}>
+              <div className={styles.featureContent}>
+                <li className={styles.checkmarkItem1}>
+                  <b>Not Just for Guns, Perfect for Other Valuables Too</b> - use it to lock up
+                  cash, your personal IDs, watches and jewelry, or anything you don't want swiped
+                  while you're not looking!
+                </li>
+              </div>
+              <div className={styles.featureImage}>
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/GunsafthreeMobile.webp"
+                  alt="QuickLock with valuables"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+          <p className={styles.paragraphMargin}>Normally $50…</p>
+          <p className={styles.paragraphMargin}>
+            The VNSH QuickLock is yours{' '}
+            <b>
+              <em>
+                <span className={styles.highlight}>totally FREE</span>
+              </em>
+            </b>{' '}
+            with your holster order today!
           </p>
           <p className={styles.paragraphMargin}>
-            In fact, most people who buy one almost always <b>end up wanting at least one more</b> –
-            either for themselves or to give to a friend or family member.
+            Plus, when you grab this deal, you’ll be doing so{' '}
+            <b>
+              <em>100% Risk-Free,</em>
+            </b>{' '}
+            because…
           </p>
-          <p className={styles.paragraphMargin}>
-            So since the holidays are right around the corner...
-          </p>
-          <p className={styles.paragraphMargin}>
-            We're giving you the <b>biggest deal we've EVER offered!</b>
-          </p>
-          <p className={styles.yellow1}>
-            <b>Buy 1 Holster, Get 1 FREE!</b>
-          </p>
-          <p className={styles.paragraphMargin}>
-            Plus, when you grab this deal today, you'll be doing so{' '}
-            <b>100% Risk-Free, because...</b>
+        </article>
+        <div className={`${styles.btnDiv} ${styles.pulse}`}>
+          <button className={styles.btn}>{buttonText}</button>
+        </div>
+        <article>
+          <p>
+            <span className={styles.belowbuttontext}>
+              60 Days to Try It Yourself… Love It Or You Don’t Pay a Dime!
+            </span>
           </p>
         </article>
         <div className={styles.subheader}>
           <span className={`${styles.subheadertext} ${styles.orange}`}>
             You're Getting An <span className={styles.red}>Iron-Clad,</span>
-            <br />
             <span className={styles.red}>Money-Back</span> Guarantee
           </span>
         </div>
@@ -312,7 +334,7 @@ const Content: React.FC<ContentProps> = ({
           <Image
             src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/guarantee-money-back-200.webp"
             alt="Money back guarantee"
-            className={styles.heroImage}
+            className={styles.heroImage2}
             width={800}
             height={200}
           />
@@ -357,7 +379,11 @@ const Content: React.FC<ContentProps> = ({
             </b>
             ...
           </p>
-          <p className={styles.paragraphMargin}>Plus... get a FREE VNSH Holster with it...</p>
+          <p className={styles.paragraphMargin}>
+            <b>
+              <em>Plus... get a FREE VNSH QuickLock with it...</em>
+            </b>
+          </p>
           <p className={styles.paragraphMargin}>
             Then you owe it to yourself to grab this deal now!
           </p>
@@ -365,60 +391,23 @@ const Content: React.FC<ContentProps> = ({
         <div className={`${styles.btnDiv} ${styles.pulse}`}>
           <button className={styles.btn}>{buttonText}</button>
         </div>
-        <div className={styles.subheader}>
-          <span className={`${styles.subheadertext} ${styles.orange}`}>
-            Fair Warning... <br />
-            Big Deal <span className={styles.red}>Before Prices Go Up...</span>
-          </span>
-        </div>
-        <article className={styles.bodymsg}>
-          <p className={styles.paragraphMargin}>
-            Since we launched in late 2022, we've done everything in our power to keep the VNSH
-            Holster{' '}
-            <b>
-              <em>as affordable as possible.</em>
-            </b>
-          </p>
-          <p className={styles.paragraphMargin}>
-            But sadly, inflation is finally forcing us to raise prices on our holster.
-          </p>
-          <p className={styles.paragraphMargin}>
-            Now, as much of a bummer as that is... the <b>GOOD NEWS</b> is that...
-          </p>
-          <p className={styles.paragraphMargin}>
-            We're running this huge{' '}
-            <b>
-              <u>
-                <span className={styles.yellow1}>Buy 1, Get 1 FREE</span>
-              </u>
-            </b>{' '}
-            deal to make sure everyone has a chance to get the VNSH Holster for an awesome price
-            before it becomes more expensive in the weeks ahead.
-          </p>
-          <p className={styles.paragraphMargin}>It won't last forever though...</p>
-          <p className={styles.paragraphMargin}>
-            Once this is over, you'll never see a deal this good on VNSH Holsters again.
-          </p>
-          <p className={styles.paragraphMargin}>So don't wait!</p>
-          <p className={styles.paragraphMargin}>
-            <b>
-              Grab your VNSH Holster and{' '}
-              <span className={styles.yellow1}>get a second one 100% FREE</span> while you still
-              can!
-            </b>
+        <article>
+          <p>
+            <span className={styles.belowbuttontext}>
+              60 Days to Try It Yourself… Love It Or You Don’t Pay a Dime!
+            </span>
           </p>
         </article>
-        <div className={`${styles.btnDiv} ${styles.pulse}`}>
-          <button className={styles.btn}>{buttonText}</button>
-        </div>
+
         <div className={styles.pad1}>
-          <div className={styles.desktopImage}>
+          <div className={`${styles.desktopImage} ${styles.holster5} ${styles.imgCenter1}`}>
             <Image
               src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/TestimoniesDesktop.webp"
               alt="Customer testimonials"
               className={styles.heroImage}
-              width={1120}
-              height={800}
+              width={1400}
+              height={1000}
+              style={{ width: '100%', height: 'auto' }}
             />
           </div>
           <div className={styles.mobileImage}>
@@ -433,9 +422,6 @@ const Content: React.FC<ContentProps> = ({
         </div>
         <div className={styles.faqs}>
           <Faqs />
-        </div>
-        <div className={`${styles.btnDiv} ${styles.pulse}`}>
-          <button className={styles.btn}>{buttonText}</button>
         </div>
         <div className={styles.footers}>
           <Footer />

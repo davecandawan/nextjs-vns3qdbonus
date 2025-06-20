@@ -20,7 +20,7 @@ interface ContentProps {
 }
 
 const Content: React.FC<ContentProps> = ({
-  buttonText = "Give Me This Buy 1, Get 1 FREE Deal Before It's Gone!",
+  buttonText = 'Give Me My VNSH Holster + FREE QuickLock!',
 }) => {
   return (
     <>
@@ -42,16 +42,20 @@ const Content: React.FC<ContentProps> = ({
             <u>Nothing But Gym Shorts, Sweatpants and T-Shirts!</u>
           </p>
         </header>
-        <div className={styles.guaranteeText}>Guaranteed Comfort Or 100% Of Your Money Back!</div>
+        <div className={styles.subheadertext1}>
+          <span className={styles.belowheadertext}>
+            <em>Guaranteed Comfort Or 100% Of Your Money Back!</em>
+          </span>
+        </div>
         <div className={styles.videoContainer}>
           <VidalyticsVideo />
         </div>
         <div className={`${styles.btnDiv} ${styles.pulse}`}>
           <button className={styles.btn}>{buttonText}</button>
         </div>
-        <div>
+        <div className={styles.imgCenter}>
           <Image
-            src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/BlackHolsterDesktop4.webp"
+            src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/quicklockbonus_new.png?v=1734018658"
             alt="VNSH Holster"
             className={styles.heroImage}
             width={1120}
@@ -61,95 +65,89 @@ const Content: React.FC<ContentProps> = ({
         </div>
         <div className={styles.header}>
           <span className={`${styles.yellow} ${styles.headertext}`}>
-            175,232 Americans Have Trusted Us to Give Them The MOST Comfortable Holster They've Ever
-            Worn
+            Discover Why Over 175,234 Americans Are Carrying With VNSH…
           </span>
         </div>
         <article className={styles.bodymsg}>
-          <p>
-            The VNSH Holster is rapidly becoming one of America's best-selling holsters…{' '}
-            <b>and for good reason too!</b>
-          </p>
           <p className={styles.paragraphMargin}>
-            It's GUARANTEED to be <b>the most comfortable holster</b> you'll ever wear - or you get
-            100% of your money back! Try it for 60 days, and if you don't like it for any reason,
-            let us know and we'll give you every penny back.
+            Literally{' '}
+            <b>
+              <em>hundreds of thousands</em>
+            </b>{' '}
+            of Americans are using VNSH to carry comfortably all day, every day.
+          </p>
+          <p className={styles.paragraphMargin}>The biggest reason why is…</p>
+          <p className={`${styles.paragraphMargin} ${styles.textmarginbot}`}>
+            It’s GUARANTEED to be the most comfortable holster you’ve ever worn –{' '}
+            <b className={styles.yellow1}>or you get 100% of your money back!</b>
           </p>
         </article>
-        <div className={styles.pad1}>
+        <div className={`${styles.pad1} ${styles.imgCenter} `}>
           <Image
             src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/guaranteed_bannerDesktop.webp"
             alt="60 Day Money Back Guarantee"
-            className={styles.heroImage}
+            className={styles.heroImage1}
             width={1120}
             height={200}
           />
         </div>
         <article className={styles.bodymsg}>
           <p className={styles.paragraphMargin}>
-            The reason for it's insane comfort? The materials. We combined the rugged{' '}
-            <b>1000D Cordura</b> with a stretchy <b>'yoga pant'</b> fabric that is not only built to
-            last for years, but also feels like silk boxers on your skin.
-          </p>
-          <p className={styles.paragraphMargin}>
-            Even better, these sweat-wicking materials do <u>NOT</u> retain sweat or odor, so you
-            can <b>carry comfortably all day</b> without getting sticky or slimy.
-          </p>
-          <p className={styles.paragraphMargin}>
-            You can wear this holster with <b>ANY</b> clothing. That's because our specially
-            designed, built in waistband simply goes around your torso like a belt, and doesn't need
-            hooks, clips, or a tactical belt to wear.
-          </p>
-          <p className={styles.paragraphMargin}>
-            This means you can wear this holster with a business suit, sweat suit, or swim suit…{' '}
-            <em>or even just your birthday suit.</em>
-          </p>
-          <p className={styles.paragraphMargin}>
-            But where it really excels{' '}
             <b>
-              <em>(and where most other holsters fail miserably)</em>
-            </b>{' '}
-            is that it helps you carry anywhere while having the ability to carry 2 additional mags.
+              <em>What makes it so comfortable??</em>
+            </b>
+          </p>
+          <p className={styles.paragraphMargin}>The secret is our…</p>
+        </article>
+        <div className={styles.subheader}>
+          <span className={`${styles.subheadertext} ${styles.orange}`}>
+            Ultra-Plush <span className={styles.red}>“Yoga Pant” Material Belt</span> + a Robust
+            Cordura Holster Body That’ll <span className={styles.red}>Never Dig or Poke</span>
+          </span>
+        </div>
+        <article className={styles.bodymsg}>
+          <p className={styles.paragraphMargin}>
+            Unlike traditional holsters that require a <b>bulky tactical belt</b> and constantly{' '}
+            <b>jab at your body</b>…
           </p>
           <p className={styles.paragraphMargin}>
-            Perhaps the best thing of all is this holster will fit 99% of all brands, types, and
-            styles of semi autos.
+            VNSH uses a durable but stretchy built-in belt that
+          </p>
+          <li className={styles.checkmarkItem}>Effortlessly wicks sweat…</li>
+          <li className={styles.checkmarkItem}>Never retains odor…</li>
+          <li className={styles.checkmarkItem}>
+            Feels softer than your favorite PJs on Christmas morning…
+          </li>
+          <p className={styles.paragraphMargin}>
+            … combined with a super tough Cordura blend holster body that gives you top-notch
+            retention – with a non-rigid feel that’ll make you forget you're carrying at all
           </p>
           <p className={styles.paragraphMargin}>
-            And our unique design ensures your concealed carry device <b>"Vanishes"</b> against your
-            body, making it virtually invisible to others.
-          </p>
-          <p className={styles.paragraphMargin}>
-            It's why we named it the{' '}
+            Plus, VNSH makes just about ANY semi auto{' '}
             <b>
-              <u>VNSH Holster!</u>
+              <u>disappear in plain sight.</u>
             </b>
           </p>
           <p className={styles.paragraphMargin}>
-            How many other holsters can do all that? <b>The answer is ZERO.</b>
+            <em>How many other holsters can do all that??</em>
+          </p>
+          <p className={styles.paragraphMargin}>
+            <b>The answer is ZERO.</b>
           </p>
         </article>
-        <div className={styles.holster3}>
-          <Image
-            src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/BlackHolsterDesktop3.webp"
-            alt="VNSH Holster in use"
-            className={styles.heroImage}
-            width={650}
-            height={400}
-          />
+        <div className={`${styles.btnDiv} ${styles.pulse}`}>
+          <button className={styles.btn}>{buttonText}</button>
         </div>
-        <article className={styles.bodymsg}>
+        <article>
           <p>
-            Now it's obvious we'd be saying this. But take a look at what some of our thousands upon
-            thousands of customers say about our holster.
+            <span className={styles.belowbuttontext}>
+              60 Days to Try It Yourself… Love It Or You Don’t Pay a Dime!
+            </span>
           </p>
         </article>
         {/* <div className="yotpo">
         <YotpoReview />
       </div> */}
-        <div className={`${styles.btnDiv} ${styles.pulse}`}>
-          <button className={styles.btn}>{buttonText}</button>
-        </div>
         <div className={styles.subheader}>
           <span className={`${styles.subheadertext} ${styles.orange}`}>
             Seriously, This Holster Works With 99.9% of Single Semi-Automatic Pistols On the Planet
@@ -164,22 +162,53 @@ const Content: React.FC<ContentProps> = ({
             height={400}
           />
         </div>
-        <div className={styles.subheader}>
-          <span className={`${styles.subheadertext} ${styles.orange}`}>
-            Don't Let An Uncomfortable Holster Be The Reason You're Unarmed When Bad Guys Attack
-          </span>
-        </div>
         <article className={styles.bodymsg}>
-          <p>The vast majority of gun owners don't carry their gun daily for 1 simple reason.</p>
-          <p className={styles.paragraphMargin}>They don't like how their holster feels.</p>
-          <p className={styles.paragraphMargin}>
-            The good news is that the VNSH Holster is made for all day wear... and owning{' '}
-            <b>it is the #1 thing you can do to ensure you're always ready to defend yourself</b>{' '}
-            and your family.
+          <p>
+            Our holster design means that <b>regardless of what pistol you own…</b> it will help you
+            safely and comfortably carry it.
           </p>
           <p className={styles.paragraphMargin}>
-            The VNSH holster is superior to leather and kydex.
+            No more needing to buy multiple holsters for all your pistols.
           </p>
+          <p className={styles.paragraphMargin}>
+            Plus, since it has 2-built in mag pouches, now{' '}
+            <b>you don’t need to spend extra money on mag pouches</b> to guarantee you’re never out
+            of the fight.
+          </p>
+          <p className={styles.paragraphMargin}>
+            Take a look at the list of brands our holster works with and then grab yours before the
+            price goes up!
+          </p>
+          <div className={styles.holster4}>
+            <div className={styles.desktopLogo}>
+              <Image
+                src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/LogoDesktop.webp?v=1729112354"
+                alt="VNSH Holster with various firearms"
+                className={styles.logoImage}
+                width={650}
+                height={400}
+              />
+            </div>
+            <div className={styles.mobileLogo}>
+              <Image
+                src="https://cdn.shopify.com/s/files/1/0670/4948/8684/files/LogoMobile.webp?v=1729112354"
+                alt="VNSH Holster with various firearms"
+                className={styles.logoImage}
+                width={400}
+                height={300}
+              />
+            </div>
+          </div>
+          <div className={`${styles.btnDiv} ${styles.pulse}`}>
+            <button className={styles.btn}>{buttonText}</button>
+          </div>
+          <article>
+            <p>
+              <span className={styles.belowbuttontext}>
+                60 Days to Try It Yourself… Love It Or You Don’t Pay a Dime!
+              </span>
+            </p>
+          </article>
           <p className={styles.paragraphMargin}>
             Where kydex can be rigid and uncomfortable... and leather is sweaty and sticky, the VNSH
             holster is ultra-comfortable because it uses a custom blend of sweat-wicking fabrics

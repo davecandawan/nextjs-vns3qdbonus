@@ -46,7 +46,7 @@ const Content: React.FC<ContentProps> = ({
           </div>
 
           <div className="text-center my-8">
-            <p className="text-xl md:text-2xl font-semibold leading-normal md:leading-tight text-red-600">
+            <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
               <span className="bg-[#ff0] px-2 py-1">
                 60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
               </span>
@@ -187,7 +187,7 @@ const Content: React.FC<ContentProps> = ({
               </button>
             </div>
             <div className="text-center my-8">
-              <p className="text-xl md:text-2xl font-semibold leading-normal md:leading-tight text-red-600">
+              <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
                 <span className="bg-[#ff0] px-2 py-1">
                   60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
                 </span>
@@ -256,7 +256,7 @@ const Content: React.FC<ContentProps> = ({
               </button>
             </div>
             <div className="text-center my-8">
-              <p className="text-xl md:text-2xl font-semibold leading-normal md:leading-tight text-red-600">
+              <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
                 <span className="bg-[#ff0] px-2 py-1">
                   60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
                 </span>
@@ -416,7 +416,7 @@ const Content: React.FC<ContentProps> = ({
               </button>
             </div>
             <div className="text-center my-8">
-              <p className="text-xl md:text-2xl font-semibold leading-normal md:leading-tight text-red-600">
+              <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
                 <span className="bg-[#ff0] px-2 py-1">
                   60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
                 </span>
@@ -485,7 +485,7 @@ const Content: React.FC<ContentProps> = ({
               </button>
             </div>
             <div className="text-center my-8">
-              <p className="text-xl md:text-2xl font-semibold leading-normal md:leading-tight text-red-600">
+              <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
                 <span className="bg-[#ff0] px-2 py-1">
                   60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
                 </span>

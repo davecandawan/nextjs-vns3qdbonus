@@ -13,11 +13,14 @@ const FooterColumn: React.FC<FooterColumnProps> = ({ imgUrl, title, text, imgWid
   // Calculate image height to maintain aspect ratio with larger size
   const aspectRatio = 100 / parseInt(imgWidth);
   const imageHeight = 200 * aspectRatio; // Increased from 160 to 200
-  
+
   return (
     <div className="flex-1 min-w-[250px] max-w-[350px] p-4 text-center">
       <div className="h-full flex flex-col items-center">
-        <div className="w-full flex items-center justify-center" style={{ height: `${imageHeight}px` }}>
+        <div
+          className="w-full flex items-center justify-center"
+          style={{ height: `${imageHeight}px` }}
+        >
           <div className="relative w-full max-w-[200px] h-full">
             <Image
               src={imgUrl}
@@ -83,7 +86,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="w-full mt-8 bg-white">
+    <footer className="w-full mt-2 bg-white">
       <div className="py-8 text-gray-800 bg-white">
         <div className="py-4">
           <div className="box-border min-w-[250px] max-w-6xl mx-auto px-4 flex flex-wrap justify-around gap-6">

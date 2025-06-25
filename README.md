@@ -1,6 +1,15 @@
 # VNSH Holsters - Next.js
 
-A modern e-commerce website for VNSH Holsters built with Next.js, TypeScript, and Tailwind CSS.
+A modern e-commerce website for VNSH Holsters built with Next.js 13+ (App Router), TypeScript, and Tailwind CSS.
+
+## 🚀 Features
+
+- **Next.js 13+** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **Responsive Design** for all devices
+- **Performance Optimized** with code splitting and lazy loading
+- **SEO Friendly** with Next.js built-in optimizations
 
 ## Getting Started
 

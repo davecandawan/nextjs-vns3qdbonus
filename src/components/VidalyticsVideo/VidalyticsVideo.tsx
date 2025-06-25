@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import Script from 'next/script';
-import styles from './VidalyticsVideo.module.css';
 
 const VidalyticsVideo = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
@@ -72,7 +71,7 @@ const VidalyticsVideo = () => {
   }, [scriptReady]);
 
   return (
-    <div className={styles.videoContainer}>
+    <div className="w-full max-w-[1000px] mx-auto relative rounded-lg overflow-hidden shadow-md bg-black aspect-video -mt-2">
       {/* Load the Vidalytics loader script */}
       <Script
         id="vidalytics-loader"
@@ -113,7 +112,7 @@ const VidalyticsVideo = () => {
       <div 
         id="vidalytics_embed_ftyvsSZ_3zHHYXRU"
         ref={videoContainerRef}
-        className={styles.videoWrapper}
+        className="relative w-full h-full min-h-[300px]"
       />
     </div>
   );

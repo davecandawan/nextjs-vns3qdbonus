@@ -1,28 +1,65 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+  // Enable more verbose logging
+  logging: {
+    level: 'debug',
+    fullUrl: true,
+  },
+  experimental: {
+    reactRefresh: true,
+    esmExternals: 'loose',
+  },
+  // Add webpack configuration for path aliases
+  webpack: (config) => {
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
+    return config;
+  },
   images: {
-    domains: [
-      'cdn.shopify.com',
-      'images.unsplash.com',
-      'd1tnk6mbnurvod.cloudfront.net'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.shopify.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'd1tnk6mbnurvod.cloudfront.net',
+      },
     ],
+    formats: ['image/avif', 'image/webp'],
   },
-  
-  // Enable CSS and SASS modules
-  sassOptions: {
-    includePaths: ['./src/styles'],
-  },
-  // Configure webpack
-  webpack: (config, { isServer }) => {
-    // Important: return the modified config
+  webpack: (config, { dev, isServer }) => {
+    if (dev && !isServer) {
+      config.watchOptions = {
+        ...config.watchOptions,
+        poll: 1000,
+        aggregateTimeout: 200,
+        ignored: ['**/.git', '**/node_modules'],
+      };
+    }
+    // Add path aliases
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': require('path').resolve(__dirname, 'src'),
+    };
     return config;
   },
   // Environment variables
   env: {
     // Add any environment variables here
   },
+  // Optional: Add a trailing slash to all paths
+  trailingSlash: true,
+  // Optional: Configure page extensions
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'mdx'],
+  // Optional: Configure build output directory
+  distDir: '.next',
 };
 
 module.exports = nextConfig;

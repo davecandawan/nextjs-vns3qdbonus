@@ -13,6 +13,20 @@ module.exports = {
   },
   theme: {
     extend: {
+      animation: {
+        'custom-pulse': 'custom-pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'fade-in': 'fadeIn 0.5s ease-in-out',
+      },
+      keyframes: {
+        'custom-pulse': {
+          '0%, 100%': { opacity: '0.736288', transform: 'scale(0.912096)' },
+          '50%': { opacity: '1', transform: 'scale(1)' },
+        },
+        'fadeIn': {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+      },
       colors: {
         custom: {
           green: '#2afe4e',
@@ -30,15 +44,6 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: 0 },
-          '100%': { opacity: 1 },
-        },
       },
     },
   },

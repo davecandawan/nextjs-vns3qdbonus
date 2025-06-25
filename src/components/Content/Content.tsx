@@ -39,14 +39,14 @@ const Content: React.FC<ContentProps> = ({
             <VidalyticsVideo />
           </div>
 
-          <div className="text-center my-8 animate-pulse">
-            <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-colors duration-300">
+          <div className="text-center my-8">
+            <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-all duration-300 animate-custom-pulse hover:animate-none hover:opacity-100 hover:scale-100">
               {buttonText}
             </button>
           </div>
 
           <div className="text-center my-8">
-            <p className="text-xl md:text-2xl font-semibold leading-tight text-red-600">
+            <p className="text-xl md:text-2xl font-semibold leading-normal md:leading-tight text-red-600">
               <span className="bg-[#ff0] px-2 py-1">
                 60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
               </span>
@@ -181,13 +181,13 @@ const Content: React.FC<ContentProps> = ({
             <p className="text-xl md:text-2xl font-medium leading-tight">
               <b>The answer is ZERO.</b>
             </p>
-            <div className="text-center my-8 animate-pulse">
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-colors duration-300">
+            <div className="text-center my-8">
+              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-all duration-300 animate-custom-pulse hover:animate-none hover:opacity-100 hover:scale-100">
                 {buttonText}
               </button>
             </div>
             <div className="text-center my-8">
-              <p className="text-xl md:text-2xl font-semibold leading-tight text-red-600">
+              <p className="text-xl md:text-2xl font-semibold leading-normal md:leading-tight text-red-600">
                 <span className="bg-[#ff0] px-2 py-1">
                   60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
                 </span>
@@ -250,13 +250,13 @@ const Content: React.FC<ContentProps> = ({
                 />
               </div>
             </div>
-            <div className="text-center my-8 animate-pulse">
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-colors duration-300">
+            <div className="text-center my-8">
+              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-all duration-300 animate-custom-pulse hover:animate-none hover:opacity-100 hover:scale-100">
                 {buttonText}
               </button>
             </div>
             <div className="text-center my-8">
-              <p className="text-xl md:text-2xl font-semibold leading-tight text-red-600">
+              <p className="text-xl md:text-2xl font-semibold leading-normal md:leading-tight text-red-600">
                 <span className="bg-[#ff0] px-2 py-1">
                   60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
                 </span>
@@ -410,13 +410,13 @@ const Content: React.FC<ContentProps> = ({
               </b>
               , because…
             </p>
-            <div className="text-center my-8 animate-pulse">
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-colors duration-300">
+            <div className="text-center my-8">
+              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-all duration-300 animate-custom-pulse hover:animate-none hover:opacity-100 hover:scale-100">
                 {buttonText}
               </button>
             </div>
             <div className="text-center my-8">
-              <p className="text-xl md:text-2xl font-semibold leading-tight text-red-600">
+              <p className="text-xl md:text-2xl font-semibold leading-normal md:leading-tight text-red-600">
                 <span className="bg-[#ff0] px-2 py-1">
                   60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
                 </span>
@@ -479,13 +479,13 @@ const Content: React.FC<ContentProps> = ({
             <p className="text-xl md:text-2xl font-medium leading-tight">
               Then you owe it to yourself to grab this deal now!
             </p>
-            <div className="text-center my-8 animate-pulse">
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-colors duration-300">
+            <div className="text-center my-8">
+              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-all duration-300 animate-custom-pulse hover:animate-none hover:opacity-100 hover:scale-100">
                 {buttonText}
               </button>
             </div>
             <div className="text-center my-8">
-              <p className="text-xl md:text-2xl font-semibold leading-tight text-red-600">
+              <p className="text-xl md:text-2xl font-semibold leading-normal md:leading-tight text-red-600">
                 <span className="bg-[#ff0] px-2 py-1">
                   60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
                 </span>

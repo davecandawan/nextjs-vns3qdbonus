@@ -2,11 +2,6 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
-// Dynamically import components with no SSR
-const YotpoReview = dynamic(() => import('../YotpoReview/YotpoReview'), {
-  ssr: false,
-});
-
 const VidalyticsVideo = dynamic(() => import('../VidalyticsVideo/VidalyticsVideo'), {
   ssr: false,
 });
@@ -272,7 +267,7 @@ const Content: React.FC<ContentProps> = ({
                 <div>
                   <em>Limited FREE Bonus Gift (Worth $50)</em>
                 </div>
-                <div className="my-2">
+                <div className="my-0 md:my-2">
                   <span className="text-[rgb(255,156,0)]">Next 127 Buyers Get a </span>
                   <em>Complimentary VNSH</em>
                 </div>

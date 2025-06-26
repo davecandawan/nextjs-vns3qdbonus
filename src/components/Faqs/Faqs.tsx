@@ -40,7 +40,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onClick }) 
         className={`bg-gray-50 overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 py-4 border-t border-gray-200' : 'max-h-0'}`}
         aria-hidden={!isOpen}
       >
-        <p className="px-4 text-gray-800 leading-relaxed">{answer}</p>
+        <p className="px-4 text-gray-800 leading-relaxed text-lg">{answer}</p>
       </div>
     </div>
   );

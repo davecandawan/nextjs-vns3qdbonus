@@ -73,9 +73,9 @@ const Content: React.FC<ContentProps> = ({
           <div className="w-full max-w-7xl mx-auto space-y-8">
             <p className="text-xl md:text-2xl font-medium leading-tight">
               Literally{' '}
-              <b>
-                <em>hundreds of thousands</em>
-              </b>{' '}
+              <span className="font-bold">
+                <span className="italic">hundreds of thousands</span>
+              </span>{' '}
               of Americans are using VNSH to carry comfortably all day, every day.
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
@@ -83,13 +83,13 @@ const Content: React.FC<ContentProps> = ({
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
               It’s GUARANTEED to be{' '}
-              <b>
-                <em>the most comfortable</em>
-              </b>{' '}
+              <span className="font-bold">
+                <span className="italic">the most comfortable</span>
+              </span>{' '}
               holster you’ve ever worn –{' '}
-              <b>
+              <span className="font-bold">
                 <span className="bg-[#ff0] px-2 py-1">or you get 100% of your money back!</span>
-              </b>
+              </span>
             </p>
             <div className="mx-auto w-full md:max-w-[70%]">
               <Image
@@ -115,8 +115,9 @@ const Content: React.FC<ContentProps> = ({
               </span>
             </header>
             <p className="text-xl md:text-2xl font-medium leading-tight">
-              Unlike traditional holsters that require a <b>bulky tactical belt</b> and constantly{' '}
-              <b>jab at your body</b>…
+              Unlike traditional holsters that require a{' '}
+              <span className="font-bold">bulky tactical belt</span> and constantly{' '}
+              <span className="font-bold">jab at your body</span>…
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight mb-4">
               VNSH uses a durable but stretchy built-in belt that:
@@ -165,21 +166,21 @@ const Content: React.FC<ContentProps> = ({
             </div>
             <p className="text-xl md:text-2xl font-medium leading-tight">
               … combined with a super tough Cordura blend holster body that gives you{' '}
-              <b>top-notch retention</b> – with a non-rigid feel that’ll make you forget you're
+              <span className="font-bold">top-notch retention</span> – with a non-rigid feel that’ll make you forget you're
               carrying at all
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
               Plus, VNSH makes just about ANY semi auto{' '}
-              <b>
+              <span className="font-bold">
                 <u>disappear in plain sight</u>
-              </b>
+              </span>
               .
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
-              <em>How many other holsters can do all that??</em>
+              <span className="italic">How many other holsters can do all that??</span>
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
-              <b>The answer is ZERO.</b>
+              <span className="font-bold">The answer is ZERO.</span>
             </p>
             <div className="text-center my-8">
               <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-all duration-300 animate-custom-pulse hover:animate-none hover:opacity-100 hover:scale-100">
@@ -209,7 +210,8 @@ const Content: React.FC<ContentProps> = ({
               />
             </div>
             <p className="text-xl md:text-2xl font-medium leading-tight">
-              Our holster design means that <b>regardless of what pistol you own…</b> it will help
+              Our holster design means that{' '}
+              <span className="font-bold">regardless of what pistol you own…</span> it will help
               you safely and comfortably carry it.
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
@@ -217,7 +219,7 @@ const Content: React.FC<ContentProps> = ({
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
               Plus, since it has 2-built in mag pouches, now{' '}
-              <b>you don’t need to spend extra money on mag pouches</b> to guarantee you’re never
+              <span className="font-bold">you don’t need to spend extra money on mag pouches</span> to guarantee you’re never
               out of the fight.
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
@@ -288,9 +290,9 @@ const Content: React.FC<ContentProps> = ({
             </div>
             <p className="text-xl md:text-2xl font-medium leading-tight">
               For a short time, we’re giving out our bestselling lockbox –{' '}
-              <b>
-                <em>the VNSH QuickLock</em>
-              </b>{' '}
+              <span className="font-bold">
+                <span className="italic">the VNSH QuickLock</span>
+              </span>{' '}
               –{' '}
               <span className="bg-[#ff0] px-2 py-1">
                 100% FREE with every holster order (from this page ONLY)!
@@ -310,13 +312,13 @@ const Content: React.FC<ContentProps> = ({
                       />
                     </div>
                     <span className="mt-1">
-                      <b>Ultra Secure, But Lightning Fast Access -</b> a simple but robust key lock
-                      gives you total peace-of-mind that{' '}
-                      <b>
-                        <em>nobody</em>
-                      </b>{' '}
-                      is getting inside but you. Yet you're always seconds away from having your
-                      weapon in-hand.
+                      <span className="font-bold">Ultra Secure, But Lightning Fast Access -</span> a simple but robust key lock
+              gives you total peace-of-mind that{' '}
+              <span className="font-bold">
+                <span className="italic">nobody</span>
+              </span>{' '}
+              is getting inside but you. Yet you're always seconds away from having your
+              weapon in-hand.
                     </span>
                   </div>
                   <div className="w-full md:w-64 flex-shrink-0 rounded-lg overflow-hidden flex items-center">
@@ -344,9 +346,9 @@ const Content: React.FC<ContentProps> = ({
                       />
                     </div>
                     <span className="mt-1">
-                      <b>Great for Your Car, Nightstand, or Really Anywhere -</b> small enough to
-                      easily fit in a bedroom drawer or cabinet, you can also toss it in your
-                      backpack then easily stow in any car glove box or console.
+                      <span className="font-bold">Great for Your Car, Nightstand, or Really Anywhere -</span> small enough to
+              easily fit in a bedroom drawer or cabinet, you can also toss it in your
+              backpack then easily stow in any car glove box or console.
                     </span>
                   </div>
                   <div className="w-full md:w-64 flex-shrink-0 rounded-lg overflow-hidden flex items-center">
@@ -374,9 +376,9 @@ const Content: React.FC<ContentProps> = ({
                       />
                     </div>
                     <span className="mt-1">
-                      <b>Not Just for Guns, Perfect for Other Valuables Too -</b> use it to lock up
-                      cash, your personal IDs, watches and jewelry, or anything you don't want
-                      swiped while you're not looking!
+                      <span className="font-bold">Not Just for Guns, Perfect for Other Valuables Too -</span> use it to lock up
+              cash, your personal IDs, watches and jewelry, or anything you don't want
+              swiped while you're not looking!
                     </span>
                   </div>
                   <div className="w-full md:w-64 flex-shrink-0 rounded-lg overflow-hidden flex items-center">
@@ -405,9 +407,9 @@ const Content: React.FC<ContentProps> = ({
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
               Plus, when you grab this deal, you’ll be doing so{' '}
-              <b>
-                <em>100% Risk-Free</em>
-              </b>
+              <span className="font-bold">
+                <span className="italic">100% Risk-Free</span>
+              </span>
               , because…
             </p>
             <div className="text-center my-8">
@@ -450,17 +452,17 @@ const Content: React.FC<ContentProps> = ({
             <p className="text-xl md:text-2xl font-medium leading-tight">It’s that simple.</p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
               If you aren’t totally thrilled, all you have to do is contact our{' '}
-              <b>
-                <em>US-Based Support Team</em>
-              </b>{' '}
+              <span className="font-bold">
+                <span className="italic">US-Based Support Team</span>
+              </span>{' '}
               within 60 days to get a full refund.
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
               <span className="bg-[#ff0] px-2 py-1">
                 Plus, we also give you a{' '}
-                <b>
-                  <em>2-year workmanship guarantee</em>
-                </b>{' '}
+                <span className="font-bold">
+                  <span className="italic">2-year workmanship guarantee</span>
+                </span>{' '}
                 as well!
               </span>
             </p>
@@ -472,9 +474,9 @@ const Content: React.FC<ContentProps> = ({
               So if you want to get an awesome price on the world’s most comfortable holster…
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
-              <b>
-                <em>Plus… get a FREE VNSH QuickLock with it…</em>
-              </b>
+              <span className="font-bold">
+                <span className="italic">Plus… get a FREE VNSH QuickLock with it…</span>
+              </span>
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
               Then you owe it to yourself to grab this deal now!

@@ -699,8 +699,8 @@ const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
               </p>
               <p className="px-3">
                 You can reach support with any questions at{' '}
-                <a href="tel:1-855-934-1001" className="font-bold text-blue-600 hover:underline">
-                  1-855-934-1001
+                <a href="tel:1-888-526-1885" className="font-bold text-blue-600 hover:underline">
+                  1-888-526-1885
                 </a>
                 .
               </p>
@@ -723,8 +723,8 @@ const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
               <p className="px-3">
                 If you return your purchase without a RMA, we can not guarantee you credit. You have
                 up to 365 days from purchase to request a refund. Call{' '}
-                <a href="tel:1-855-934-1001" className="font-bold text-blue-600 hover:underline">
-                  1-855-934-1001
+                <a href="tel:1-888-526-1885" className="font-bold text-blue-600 hover:underline">
+                  1-888-526-1885
                 </a>
                 .
               </p>

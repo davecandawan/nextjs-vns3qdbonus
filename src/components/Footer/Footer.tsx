@@ -58,8 +58,8 @@ const FooterLink: React.FC<FooterLinkProps> = ({ label, id, onClick }) => (
 );
 
 const FooterLinks: React.FC<{ loadInfo: (id: string) => void }> = ({ loadInfo }) => (
-  <div className="w-full text-base text-center py-5 flex flex-wrap justify-center items-center gap-2">
-    <FooterLink label="Terms & Conditions" id="terms-pop-modal" onClick={loadInfo} />
+  <div className="w-full text-base text-center py-1 flex flex-wrap justify-center items-center gap-2">
+    <FooterLink label="Terms & Disclaimer" id="terms-pop-modal" onClick={loadInfo} />
     <span className="text-gray-300 select-none">|</span>
     <FooterLink label="Privacy Policy" id="privacy-policy-modal" onClick={loadInfo} />
     <span className="text-gray-300 select-none">|</span>
@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="text-center text-gray-600 py-4">
+        <div className="text-center text-gray-600 py-1">
           © <b>2025 VNSH.com</b> All Rights Reserved.
         </div>
         <FooterLinks loadInfo={loadInfo} />

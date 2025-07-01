@@ -1,8 +1,13 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const VidalyticsVideo = dynamic(() => import('../VidalyticsVideo/VidalyticsVideo'), {
+  ssr: false,
+});
+
+const YotpoReview = dynamic(() => import('../Yotpo/YotpoReview'), {
   ssr: false,
 });
 
@@ -11,18 +16,17 @@ interface ContentProps {
 }
 
 const Content: React.FC<ContentProps> = ({
-  buttonText = 'Give Me My VNSH Holster + FREE QuickLock!',
+  buttonText = 'Give Me My VNSH Holster + FREE QuickDraw Gun Magnet',
 }) => {
   return (
     <div className="min-h-screen bg-[url('/bg.webp')] bg-cover bg-fixed bg-repeat bg-center">
       <div className="sticky top-0 left-0 right-0 w-full bg-custom-green text-black text-center py-2 px-4 text-[1.3rem] sm:text-[1.5rem] font-semibold z-50 shadow-md">
-        FREE <span className="line-through">$50</span> VNSH QuickLock With Every Order - This Page
-        ONLY!
+        FREE $39 QuickDraw Gun Magnet With Every Order!
       </div>
       <div className="w-full max-w-[1140px] mx-auto px-5 py-4 lg:px-20 bg-white">
         <div className="space-y-8">
           <header className="text-center py-1">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium leading-snug md:leading-tight mb-4 px-2">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-normal leading-snug md:leading-tight mb-4 px-2">
               <span className="font-bold italic">Insanely Comfy Holster</span> Makes Any Semi-Auto
               (Plus 2 Extra Mags) <span className="font-bold italic">Disappear In Plain Sight</span>{' '}
               Even If You Wear
@@ -39,57 +43,29 @@ const Content: React.FC<ContentProps> = ({
             <VidalyticsVideo />
           </div>
 
-          <div className="text-center my-8">
-            <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-100">
+          <div className="text-center my-8 md:my-10">
+            <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:py-3 md:px-10 md:text-3xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-105 transform">
               {buttonText}
             </button>
           </div>
-
-          <div className="text-center my-8">
-            <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
-              <span className="bg-[#ff0] px-2 py-1">
-                60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
-              </span>
-            </p>
-          </div>
-          <div className="w-full md:w-[80%] mx-auto max-w-[1120px] px-4 md:px-0">
-            <Image
-              src="/contentimages/quicklockbonus_new.webp"
-              alt="VNSH Holster deal"
-              className="w-full h-auto"
-              width={1120}
-              height={600}
-              priority
-            />
-          </div>
           <header className="text-center py-1 md:py-6">
-            <span className="text-3xl md:text-5xl font-semibold leading-tight md:leading-[1.2]">
-              <span className="bg-[#f78f18] px-2 py-1">
-                Discover Why Over 175,234 Americans Are Carrying With VNSH…
+            <span className="text-xl md:text-4xl font-bold leading-normal md:leading-[1.4]">
+              <span className="bg-[#ffa500] px-0.5 py-0.5">
+                175,232 Americans Have Trusted Us to Give Them The MOST Comfortable Holster They’ve
+                Ever Worn
               </span>
             </span>
           </header>
 
           <div className="w-full max-w-7xl mx-auto space-y-8">
-            <p className="text-xl md:text-2xl font-medium leading-tight">
-              Literally{' '}
-              <span className="font-bold">
-                <span className="italic">hundreds of thousands</span>
-              </span>{' '}
-              of Americans are using VNSH to carry comfortably all day, every day.
+            <p className="text-lg md:text-2xl leading-normal">
+              The VNSH Holster is rapidly becoming one of America’s best-selling holsters…{' '}
+              <span className="font-bold">and for good reason too!</span>
             </p>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
-              The biggest reason why is…
-            </p>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
-              It’s GUARANTEED to be{' '}
-              <span className="font-bold">
-                <span className="italic">the most comfortable</span>
-              </span>{' '}
-              holster you’ve ever worn –{' '}
-              <span className="font-bold">
-                <span className="bg-[#ff0] py-1">or you get 100% of your money back!</span>
-              </span>
+            <p className="text-lg md:text-2xl leading-normal">
+              It’s GUARANTEED to be <span className="font-bold">the most comfortable holster</span>{' '}
+              you’ll ever wear - or you get 100% of your money back! Try it for 60 days, and if you
+              don’t like it for any reason, let us know and we’ll give you every penny back.
             </p>
             <div className="mx-auto w-full md:max-w-[70%]">
               <Image
@@ -101,89 +77,68 @@ const Content: React.FC<ContentProps> = ({
                 priority
               />
             </div>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
-              <b>
-                <em>What makes it so comfortable??</em>
-              </b>
+            <p className="text-lg md:text-2xl leading-normal">
+              The reason for it’s insane comfort? The materials. We combined the rugged{' '}
+              <span className="font-bold">1000D Cordura</span> with a stretchy{' '}
+              <span className="font-bold">'yoga pant'</span> fabric that is not only built to last
+              for years, but also feels like silk boxers on your skin.
             </p>
-            <p className="text-xl md:text-2xl font-medium leading-tight">The secret is our…</p>
-            <header className="text-center py-1">
-              <span className="text-[25px] md:text-[36px] font-bold leading-tight md:leading-[1.2] text-[rgb(255,156,0)]">
-                Ultra-Plush <span className="text-red-600">"Yoga Pant" Material</span> Belt + a
-                Robust Cordura Holster Body{' '}
-                <span className="text-red-600">That'll Never Dig or Poke</span>
-              </span>
-            </header>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
-              Unlike traditional holsters that require a{' '}
-              <span className="font-bold">bulky tactical belt</span> and constantly{' '}
-              <span className="font-bold">jab at your body</span>…
+            <p className="text-lg md:text-2xl leading-normal">
+              Even better, these sweat-wicking materials do <span className="underline">NOT</span>{' '}
+              retain sweat or odor, so you can{' '}
+              <span className="font-bold">carry comfortably all day</span> without getting sticky or
+              slimy.
             </p>
-            <p className="text-xl md:text-2xl font-medium leading-tight mb-4">
-              VNSH uses a durable but stretchy built-in belt that:
+            <p className="text-lg md:text-2xl leading-normal">
+              You can wear this holster with <span className="font-bold underline">ANY</span>{' '}
+              clothing. That’s because our specially designed, built in waistband simply goes around
+              your torso like a belt, and doesn’t need hooks, clips, or a tactical belt to wear.
             </p>
-            <div className="pl-8 md:pl-12">
-              <ul className="space-y-5 mb-8 text-xl md:text-2xl font-medium leading-tight">
-                <li className="flex items-start">
-                  <div className="w-8 h-8 mr-3 relative top-1 flex-shrink-0">
-                    <Image
-                      src="/contentimages/greenCheck.png"
-                      alt="Checkmark"
-                      width={32}
-                      height={32}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <span className="mt-1">Effortlessly wicks sweat…</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 mr-3 relative top-1 flex-shrink-0">
-                    <Image
-                      src="/contentimages/greenCheck.png"
-                      alt="Checkmark"
-                      width={32}
-                      height={32}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <span className="mt-1">Never retains odor…</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-8 h-8 mr-3 relative top-1 flex-shrink-0">
-                    <Image
-                      src="/contentimages/greenCheck.png"
-                      alt="Checkmark"
-                      width={32}
-                      height={32}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <span className="mt-1">
-                    Feels softer than your favorite PJs on Christmas morning…
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
-              … combined with a super tough Cordura blend holster body that gives you{' '}
-              <span className="font-bold">top-notch retention</span> – with a non-rigid feel that’ll
-              make you forget you're carrying at all
+            <p className="text-lg md:text-2xl leading-normal">
+              This means you can wear this holster with a business suit, sweat suit,{' '}
+              <span className="italic">or swim suit… or even just your birthday suit</span>.
             </p>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
-              Plus, VNSH makes just about ANY semi auto{' '}
-              <span className="font-bold">
-                <u>disappear in plain sight</u>
-              </span>
-              .
+            <p className="text-lg md:text-2xl leading-normal">
+              But where it really excels{' '}
+              <span className="font-bold italic">
+                (and where most other holsters fail miserably)
+              </span>{' '}
+              is that it helps you carry anywhere while having the ability to carry 2 additional
+              mags.
             </p>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
-              <span className="italic">How many other holsters can do all that??</span>
+            <p className="text-lg md:text-2xl leading-normal">
+              Perhaps the best thing of all is this holster will fit 99% of all brands, types, and
+              styles of semi autos.
             </p>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
+            <p className="text-lg md:text-2xl leading-normal">
+              And our unique design ensures your concealed carry device{' '}
+              <span className="font-bold">“Vanishes”</span> against your body, making it virtually
+              invisible to others.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              It’s why we named it the <span className="font-bold underline">VNSH Holster</span>!
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              How many other holsters can do all that?{' '}
               <span className="font-bold">The answer is ZERO.</span>
             </p>
-            <div className="text-center my-8">
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-100">
+            <div className="mx-auto w-full md:max-w-[70%]">
+              <Image
+                src="/contentimages/BlackHolsterDesktop3.webp"
+                alt="VNSH Holster deal"
+                className="w-full h-auto"
+                width={1120}
+                height={600}
+                priority
+              />
+            </div>
+            <p className="text-lg md:text-2xl leading-normal">
+              Now it’s obvious we’d be saying this. But take a look at what some of our thousands
+              upon thousands of customers say about our holster.
+            </p>
+            <YotpoReview />
+            <div className="text-center my-8 md:my-10">
+              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:py-3 md:px-10 md:text-3xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-105 transform">
                 {buttonText}
               </button>
             </div>
@@ -194,8 +149,9 @@ const Content: React.FC<ContentProps> = ({
                 </span>
               </p>
             </div>
+            <hr className="my-8 border-t border-gray-200" />
             <header className="text-center py-1">
-              <span className="text-[25px] md:text-[36px] font-bold leading-tight md:leading-[1.2] text-[rgb(255,156,0)]">
+              <span className="text-[25px] md:text-[36px] font-bold leading-tight md:leading-[1.2] text-[#f16500]">
                 Seriously, This Holster Works With 99.9% of Semi-Automatic Pistols On the Planet
               </span>
             </header>
@@ -209,20 +165,20 @@ const Content: React.FC<ContentProps> = ({
                 priority
               />
             </div>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
+            <p className="text-lg md:text-2xl leading-normal">
               Our holster design means that{' '}
               <span className="font-bold">regardless of what pistol you own…</span> it will help you
               safely and comfortably carry it.
             </p>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
+            <p className="text-lg md:text-2xl leading-normal">
               No more needing to buy multiple holsters for all your pistols.
             </p>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
+            <p className="text-lg md:text-2xl leading-normal">
               Plus, since it has 2-built in mag pouches, now{' '}
               <span className="font-bold">you don’t need to spend extra money on mag pouches</span>{' '}
               to guarantee you’re never out of the fight.
             </p>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
+            <p className="text-lg md:text-2xl leading-normal">
               Take a look at the list of brands our holster works with and then grab yours before
               the price goes up!
             </p>
@@ -252,8 +208,99 @@ const Content: React.FC<ContentProps> = ({
                 />
               </div>
             </div>
+            <div className="text-center my-8 md:my-10">
+              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:py-3 md:px-10 md:text-3xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-105 transform">
+                {buttonText}
+              </button>
+            </div>
             <div className="text-center my-8">
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-100">
+              <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
+                <span className="bg-[#ff0] px-2 py-1">
+                  60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
+                </span>
+              </p>
+            </div>
+            <hr className="my-8 border-t border-gray-200" />
+            <header className="text-center py-1">
+              <span className="text-[25px] md:text-[36px] font-bold leading-tight md:leading-[1.2] text-[#f16500]">
+                Don’t Let An Uncomfortable Holster Be The Reason You’re Unarmed When Bad Guys Attack
+              </span>
+            </header>
+            <p className="text-lg md:text-2xl leading-normal">
+              The vast majority of gun owners don’t carry their gun daily for 1 simple reason.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              They don’t like how their holster feels.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              The good news is that the VNSH Holster is made for all day wear… and owning{' '}
+              <span className="font-bold">
+                it is the #1 thing you can do to ensure you're always ready to defend yourself
+              </span>{' '}
+              and your family.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              The VNSH holster is <span className="font-bold">superior</span> to leather and kydex.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              Where kydex can be rigid and uncomfortable… and leather is sweaty and sticky, the VNSH
+              holster is ultra-comfortable because it uses a custom blend of sweat-wicking fabrics
+              that we call "yoga pant" fabric to help you stay cool and dry in the nastiest
+              environments.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              Not to mention the waist band is made from a crazy comfy velcro{' '}
+              <span className="font-bold">that will</span> not snag on shirts, waistbands and the
+              like.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              And because of its unique no-clip, no hook design,{' '}
+              <span className="font-bold">
+                you can comfortably configure the holster any which way you want.
+              </span>
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              Want to carry at 3 o’clock? Go for it.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              Like pure appendix carry? That’s easy.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              Does carrying in the small of your back suit you best? Well, it works there too.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              You can even carry it up high on your chest or side thanks to the adjustable strap
+              (which extends up to 48 inches and 68 inches with our extension strap).
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              Also, we combined that awesome "yoga pant" fabric with rugged 1000D Cordura so it will
+              withstand years and years of abuse without showing a sign of distress.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              And best of all it features an{' '}
+              <span className="font-bold">enhanced trigger guard.</span> Yes, it’s true, the VNSH
+              holster is the only bellyband on the planet with a dedicated trigger guard built in. A
+              solid but flexible piece of .7mm plastic resits in the custom-built holster to prevent{' '}
+              <span className="font-bold">anything</span> from accidentally causing a negligent
+              discharge.
+            </p>
+            <p className="text-lg md:text-2xl leading-normal">
+              Not to mention the retention is rock-solid…{' '}
+              <span className="font-bold">but still incredibly easy to draw.</span> Never fear that
+              your gun will fall out, or that a criminal will be able to disarm you.
+            </p>
+            <div className="w-full md:w-[60%] mx-auto max-w-[1120px] px-4 md:px-0">
+              <Image
+                src="/contentimages/BlackHolsterDesktop2.webp"
+                alt="VNSH Holster deal"
+                className="w-full h-auto"
+                width={1120}
+                height={600}
+                priority
+              />
+            </div>
+            <div className="text-center my-8 md:my-10">
+              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:py-3 md:px-10 md:text-3xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-105 transform">
                 {buttonText}
               </button>
             </div>
@@ -266,21 +313,17 @@ const Content: React.FC<ContentProps> = ({
             </div>
             <header className="text-center py-1">
               <div className="text-[25px] md:text-[36px] font-bold leading-tight md:leading-[1.0] text-[rgb(255,0,0)]">
-                <div>
-                  <em>Limited FREE Bonus Gift (Worth $50)</em>
-                </div>
+                <div>$39 BONUS GIFT!</div>
                 <div className="my-0 md:my-2">
-                  <span className="text-[rgb(255,156,0)]">Next 127 Buyers Get a </span>
-                  <em>Complimentary VNSH</em>
+                  <span className="text-[#f16500]">Get a </span>
+                  QuickDraw Gun Magnet 100% FREE
                 </div>
-                <div>
-                  <em>QuickLock Safe!</em>
-                </div>
+                <span className="text-[#f16500]">With Your Purchase Today</span>
               </div>
             </header>
-            <div className="w-full md:w-[80%] mx-auto max-w-[1120px] px-4 md:px-0">
+            <div className="w-full md:w-[50%] mx-auto max-w-[1120px] px-4 md:px-0">
               <Image
-                src="/contentimages/quicklockbonus_new.webp"
+                src="/contentimages/FREE_SGM.webp"
                 alt="VNSH Holster deal"
                 className="w-full h-auto"
                 width={1120}
@@ -416,8 +459,8 @@ const Content: React.FC<ContentProps> = ({
               </span>
               , because…
             </p>
-            <div className="text-center my-8">
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-100">
+            <div className="text-center my-8 md:my-10">
+              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:py-3 md:px-10 md:text-3xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-105 transform">
                 {buttonText}
               </button>
             </div>
@@ -479,14 +522,14 @@ const Content: React.FC<ContentProps> = ({
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
               <span className="font-bold">
-                <span className="italic">Plus… get a FREE VNSH QuickLock with it…</span>
+                <span className="italic">Plus… get a FREE QuickDraw gun magnet with it…</span>
               </span>
             </p>
             <p className="text-xl md:text-2xl font-medium leading-tight">
               Then you owe it to yourself to grab this deal now!
             </p>
-            <div className="text-center my-8">
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:text-2xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-100">
+            <div className="text-center my-8 md:my-10">
+              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:py-3 md:px-10 md:text-3xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-105 transform">
                 {buttonText}
               </button>
             </div>

@@ -7,7 +7,7 @@ const VidalyticsVideo = dynamic(() => import('../VidalyticsVideo/VidalyticsVideo
   ssr: false,
 });
 
-const YotpoReview = dynamic(() => import('../Yotpo/YotpoReview'), {
+const YotpoReview = dynamic(() => import('../Yotpo/YotpoReview').then(mod => mod.default), {
   ssr: false,
 });
 
@@ -136,7 +136,9 @@ const Content: React.FC<ContentProps> = ({
               Now it’s obvious we’d be saying this. But take a look at what some of our thousands
               upon thousands of customers say about our holster.
             </p>
-            <YotpoReview />
+            <div className="my-8 w-full">
+              <YotpoReview />
+            </div>
             <div className="text-center my-8 md:my-10">
               <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:py-3 md:px-10 md:text-3xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-105 transform">
                 {buttonText}
@@ -331,46 +333,50 @@ const Content: React.FC<ContentProps> = ({
                 priority
               />
             </div>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
-              For a short time, we’re giving out our bestselling lockbox –{' '}
-              <span className="font-bold">
-                <span className="italic">the VNSH QuickLock</span>
-              </span>{' '}
-              –{' '}
-              <span className="bg-[#ff0] py-1">
-                100% FREE with every holster order (from this page ONLY)!
+            <p className="text-xl md:text-2xl leading-tight">
+              Our goal today is to give you a <span className="font-bold">massive deal</span> to
+              ensure you’re{' '}
+              <span className="underline">
+                always prepared to defend your life when it matters most.
               </span>
             </p>
-            <div className="pl-4 md:pl-6">
-              <ul className="space-y-6 mb-6 text-xl md:text-2xl font-medium leading-tight">
+            <p className="text-xl md:text-2xl leading-tight">
+              That’s why we’re going to make it a{' '}
+              <span className="font-bold italic">total no-brainer</span> to order right now, by
+              giving you an <span className="font-bold underline">awesome and FREE gift!</span>
+            </p>
+            <div>
+              <ul className="space-y-6 mb-6 text-xl md:text-2xl leading-tight">
                 <li className="flex flex-col md:flex-row md:items-start gap-4">
-                  <div className="flex-1 flex items-start">
-                    <div className="w-8 h-8 mr-3 relative top-1 flex-shrink-0">
-                      <Image
-                        src="/contentimages/greenCheck.png"
-                        alt="Checkmark"
-                        width={32}
-                        height={32}
-                        className="w-full h-auto"
-                      />
-                    </div>
-                    <span className="mt-1">
-                      <span className="font-bold">Ultra Secure, But Lightning Fast Access -</span> a
-                      simple but robust key lock gives you total peace-of-mind that{' '}
-                      <span className="font-bold">
-                        <span className="italic">nobody</span>
-                      </span>{' '}
-                      is getting inside but you. Yet you're always seconds away from having your
-                      weapon in-hand.
-                    </span>
+                  <div className="flex-1">
+                    <p>
+                      Your gift is our extremely popular{' '}
+                      <span className="font-bold italic">QuickDraw Gun Magnet</span>.
+                    </p>
+                    <p>
+                      Normally it sells for $39.97… but it’s yours for nothing if you act now and
+                      accept the deal on this page today.
+                    </p>
+                    <p>
+                      And the reason people love it is because it lets you{' '}
+                      <span className="font-bold">mount your gun virtually anywhere</span> and{' '}
+                      <span className="underline">
+                        chamber, draw, and fire in{' '}
+                        <span className="font-bold">under 1.5 seconds!</span>
+                      </span>
+                    </p>
+                    <p>
+                      It’s one of the <span className="font-bold">fastest, most efficient</span>{' '}
+                      ways to deploy your firearm whenever it’s not in your concealed holster.
+                    </p>
                   </div>
-                  <div className="w-full md:w-64 flex-shrink-0 rounded-lg overflow-hidden flex items-center">
+                  <div className="w-full md:w-96 flex-shrink-0 overflow-hidden flex items-center">
                     <div className="relative w-full h-auto">
                       <Image
-                        src="/contentimages/VNSH_Gun_Safe1.webp"
+                        src="/contentimages/VNSH-SGun-Magnet-7-5001.webp"
                         alt="Secure Access"
-                        width={256}
-                        height={256}
+                        width={384}
+                        height={384}
                         className="w-full h-auto object-contain"
                       />
                     </div>
@@ -378,63 +384,75 @@ const Content: React.FC<ContentProps> = ({
                 </li>
 
                 <li className="flex flex-col md:flex-row md:items-start gap-4">
-                  <div className="flex-1 flex items-start">
-                    <div className="w-8 h-8 mr-3 relative top-1 flex-shrink-0">
+                  <div className="flex-1">
+                    <p className="mb-6 text-xl md:text-2xl leading-tight">Whether that's:</p>
+                    <div className="flex items-center gap-2 mb-2">
                       <Image
-                        src="/contentimages/greenCheck.png"
-                        alt="Checkmark"
+                        src="/contentimages/check-green1.png"
+                        alt="Check"
                         width={32}
                         height={32}
-                        className="w-full h-auto"
+                        className="flex-shrink-0"
                       />
+                      <span className="leading-none">In the car</span>
                     </div>
-                    <span className="mt-1">
-                      <span className="font-bold">
-                        Great for Your Car, Nightstand, or Really Anywhere -
-                      </span>{' '}
-                      small enough to easily fit in a bedroom drawer or cabinet, you can also toss
-                      it in your backpack then easily stow in any car glove box or console.
-                    </span>
-                  </div>
-                  <div className="w-full md:w-64 flex-shrink-0 rounded-lg overflow-hidden flex items-center">
-                    <div className="relative w-full h-auto">
+                    <div className="flex items-center gap-2 mb-2">
                       <Image
-                        src="/contentimages/VNSH_Gun_Safe2.webp"
-                        alt="Portable Design"
-                        width={256}
-                        height={256}
-                        className="w-full h-auto object-contain"
-                      />
-                    </div>
-                  </div>
-                </li>
-
-                <li className="flex flex-col md:flex-row md:items-start gap-4">
-                  <div className="flex-1 flex items-start">
-                    <div className="w-8 h-8 mr-3 relative top-1 flex-shrink-0">
-                      <Image
-                        src="/contentimages/greenCheck.png"
-                        alt="Checkmark"
+                        src="/contentimages/check-green1.png"
+                        alt="Check"
                         width={32}
                         height={32}
-                        className="w-full h-auto"
+                        className="flex-shrink-0"
                       />
+                      <span className="leading-none">Under your desk</span>
                     </div>
-                    <span className="mt-1">
-                      <span className="font-bold">
-                        Not Just for Guns, Perfect for Other Valuables Too -
+                    <div className="flex items-center gap-2 mb-2">
+                      <Image
+                        src="/contentimages/check-green1.png"
+                        alt="Check"
+                        width={32}
+                        height={32}
+                        className="flex-shrink-0"
+                      />
+                      <span className="leading-none">Inside your nightstand</span>
+                    </div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <Image
+                        src="/contentimages/check-green1.png"
+                        alt="Check"
+                        width={32}
+                        height={32}
+                        className="flex-shrink-0"
+                      />
+                      <span className="leading-none">By your front door</span>
+                    </div>
+                    <div className="flex items-center gap-2 mb-6">
+                      <Image
+                        src="/contentimages/check-green1.png"
+                        alt="Check"
+                        width={32}
+                        height={32}
+                        className="flex-shrink-0"
+                      />
+                      <span className="text-xl md:text-2xl leading-tight">
+                        Or just about anywhere!
+                      </span>
+                    </div>
+                    <p className="text-xl md:text-2xl leading-tight mt-4">
+                      It gives you back{' '}
+                      <span className="font-bold italic">
+                        precious, life-saving seconds of reaction time
                       </span>{' '}
-                      use it to lock up cash, your personal IDs, watches and jewelry, or anything
-                      you don't want swiped while you're not looking!
-                    </span>
+                      in the moments where you need it most!
+                    </p>
                   </div>
-                  <div className="w-full md:w-64 flex-shrink-0 rounded-lg overflow-hidden flex items-center">
+                  <div className="w-full md:w-96 flex-shrink-0 overflow-hidden flex items-center">
                     <div className="relative w-full h-auto">
                       <Image
-                        src="/contentimages/VNSH_Gun_Safe3.webp"
-                        alt="Versatile Use"
-                        width={256}
-                        height={256}
+                        src="/contentimages/VNSH-SGun-Magnet-4-5001.webp"
+                        alt="Secure Access"
+                        width={384}
+                        height={384}
                         className="w-full h-auto object-contain"
                       />
                     </div>
@@ -442,38 +460,16 @@ const Content: React.FC<ContentProps> = ({
                 </li>
               </ul>
             </div>
-            <p className="text-xl md:text-2xl font-medium leading-tight">Normally $50…</p>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
-              The VNSH QuickLock is yours{' '}
-              <b>
-                <em>
-                  <span className="bg-[#ff0] py-1text-red-600">totally FREE</span>
-                </em>
-              </b>{' '}
-              with your holster order today!
+            <p className="text-xl md:text-2xl leading-tight">
+              1000s of people have <span className="font-bold italic">happily paid full price</span>{' '}
+              for the QuickDraw Gun Magnet…
             </p>
-            <p className="text-xl md:text-2xl font-medium leading-tight">
-              Plus, when you grab this deal, you’ll be doing so{' '}
-              <span className="font-bold">
-                <span className="italic">100% Risk-Free</span>
-              </span>
-              , because…
+            <p className="text-xl md:text-2xl leading-tight font-bold">
+              But it’s yours totally FREE when you accept this deal today!
             </p>
-            <div className="text-center my-8 md:my-10">
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:py-3 md:px-10 md:text-3xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-105 transform">
-                {buttonText}
-              </button>
-            </div>
-            <div className="text-center my-8">
-              <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
-                <span className="bg-[#ff0] px-2 py-1">
-                  60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
-                </span>
-              </p>
-            </div>
             <header className="text-center py-1">
-              <div className="text-[25px] md:text-[36px] font-bold leading-tight md:leading-[1.0] text-[rgb(255,156,0)]">
-                <div>You’re Getting An</div>
+              <div className="text-[25px] md:text-[36px] font-bold leading-tight md:leading-[1.0] text-[#f16500]">
+                <div>Plus, You’re Getting An</div>
                 <div className="my-0 md:my-2">
                   <span className="text-[rgb(255,0,0)]">Iron-Clad, Money-Back </span>
                   <span>Guarantee</span>
@@ -564,6 +560,18 @@ const Content: React.FC<ContentProps> = ({
                   priority
                 />
               </div>
+            </div>
+            <div className="text-center my-8 md:my-10">
+              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:py-3 md:px-10 md:text-3xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-105 transform">
+                {buttonText}
+              </button>
+            </div>
+            <div className="text-center my-8">
+              <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
+                <span className="bg-[#ff0] px-2 py-1">
+                  60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
+                </span>
+              </p>
             </div>
           </div>
         </div>

@@ -12,6 +12,10 @@ const YotpoReview = dynamic(() => import('../Yotpo/YotpoReview').then(mod => mod
   ssr: false,
 });
 
+const CallToAction = dynamic(() => import('../CallToAction/CallToAction'), {
+  ssr: false,
+});
+
 interface ContentProps {
   buttonText?: string;
 }
@@ -30,8 +34,13 @@ const Content: React.FC<ContentProps> = ({
 
   return (
     <div className="min-h-screen bg-[url('/bg.webp')] bg-cover bg-fixed bg-repeat bg-center">
-      <div className="sticky top-0 left-0 right-0 w-full bg-custom-green text-black text-center py-2 px-4 text-[1.3rem] sm:text-[1.5rem] font-semibold z-50 shadow-md">
-        FREE $39 QuickDraw Gun Magnet With Every Order!
+      <div className="sticky top-0 left-0 right-0 w-full bg-custom-green text-center py-2 px-4 text-[1.3rem] sm:text-[1.5rem] font-semibold z-50 shadow-md">
+        <a
+          href={getCheckoutUrl('https://secure.vnsh.com/vns3qdbonus/checkout')}
+          className="inline-block text-black hover:text-black"
+        >
+          FREE $39 QuickDraw Gun Magnet With Every Order!
+        </a>
       </div>
       <div className="w-full max-w-[1140px] mx-auto px-5 py-4 lg:px-20 bg-white">
         <div className="space-y-8">
@@ -53,16 +62,7 @@ const Content: React.FC<ContentProps> = ({
             <VidalyticsVideo />
           </div>
 
-          <div className="text-center my-8 md:my-10">
-            <a
-              href={getCheckoutUrl('https://secure.vnsh.com/vns3qdbonus/checkout')}
-              className="inline-block"
-            >
-              <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:py-3 md:px-10 md:text-3xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-105 transform">
-                {buttonText}
-              </button>
-            </a>
-          </div>
+          <CallToAction buttonText={buttonText} showTrialText={false} />
           <header className="text-center py-1 md:py-6">
             <span className="text-xl md:text-4xl font-bold leading-normal md:leading-[1.4]">
               <span className="bg-[#ffa500] px-0.5 py-0.5">
@@ -595,23 +595,6 @@ const Content: React.FC<ContentProps> = ({
                   priority
                 />
               </div>
-            </div>
-            <div className="text-center my-8 md:my-10">
-              <a
-                href={getCheckoutUrl('https://secure.vnsh.com/vns3qdbonus/checkout')}
-                className="inline-block"
-              >
-                <button className="bg-[#28a745] hover:bg-[#218838] text-white font-bold py-4 px-8 text-xl md:py-3 md:px-10 md:text-3xl transition-all duration-300 animate-custom-pulse hover:opacity-100 hover:scale-105 transform">
-                  {buttonText}
-                </button>
-              </a>
-            </div>
-            <div className="text-center my-8">
-              <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
-                <span className="bg-[#ff0] px-2 py-1">
-                  60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
-                </span>
-              </p>
             </div>
           </div>
         </div>

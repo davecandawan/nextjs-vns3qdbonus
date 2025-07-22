@@ -42,7 +42,7 @@ const Content: React.FC<ContentProps> = ({
           FREE $39 QuickDraw Gun Magnet With Every Order!
         </a>
       </div>
-      <div className="w-full max-w-[1140px] mx-auto px-5 py-4 lg:px-20 bg-white">
+      <div className="w-full max-w-[1200px] mx-auto px-5 py-4 lg:px-20 bg-white -mt-2">
         <div className="space-y-8">
           <header className="text-center py-1">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-normal leading-snug md:leading-tight mb-4 px-2">
@@ -165,7 +165,7 @@ const Content: React.FC<ContentProps> = ({
               </a>
             </div>
             <div className="text-center my-8">
-              <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
+              <p className="text-xl md:text-1xl font-bold leading-normal md:leading-tight text-[#ff0000]">
                 <span className="bg-[#ff0] px-2 py-1">
                   60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
                 </span>
@@ -241,7 +241,7 @@ const Content: React.FC<ContentProps> = ({
               </a>
             </div>
             <div className="text-center my-8">
-              <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
+              <p className="text-xl md:text-1xl font-bold leading-normal md:leading-tight text-[#ff0000]">
                 <span className="bg-[#ff0] px-2 py-1">
                   60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
                 </span>
@@ -337,7 +337,7 @@ const Content: React.FC<ContentProps> = ({
               </a>
             </div>
             <div className="text-center my-8">
-              <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
+              <p className="text-xl md:text-1xl font-bold leading-normal md:leading-tight text-[#ff0000]">
                 <span className="bg-[#ff0] px-2 py-1">
                   60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
                 </span>
@@ -565,7 +565,7 @@ const Content: React.FC<ContentProps> = ({
               </a>
             </div>
             <div className="text-center my-8">
-              <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
+              <p className="text-xl md:text-1xl font-bold leading-normal md:leading-tight text-[#ff0000]">
                 <span className="bg-[#ff0] px-2 py-1">
                   60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
                 </span>
@@ -595,6 +595,7 @@ const Content: React.FC<ContentProps> = ({
                   priority
                 />
               </div>
+              <hr className="my-6 border-t border-gray-200" />
             </div>
           </div>
         </div>

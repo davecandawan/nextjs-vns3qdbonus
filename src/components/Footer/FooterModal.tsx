@@ -8,6 +8,9 @@ interface FooterModalProps {
 const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
   // Only render the modal if we have a valid modalId
   if (!modalId) return null;
+  
+  // Add animation classes based on modal state
+  const modalClasses = `fixed inset-0 z-50 flex items-start justify-center pt-16 px-4 pb-4 overflow-y-auto transition-all duration-300 ease-out transform ${modalId ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`;
 
   // Function to get the appropriate content based on modalId
   const getModalContent = () => {
@@ -16,15 +19,15 @@ const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
         return (
           <>
             <div className="border-b border-gray-200 pb-4 mb-4">
-              <h2 className="text-2xl font-bold text-gray-800">Terms &amp; Disclaimer</h2>
+              <h2 className="text-2xl font-bold text-black">Terms &amp; Disclaimer</h2>
             </div>
             <div className="prose max-w-none">
-              <p className="font-semibold">Effective Date: January 1st, 2019</p>
-              <p className="mb-4">
+              <p className="font-semibold text-black">Effective Date: January 1st, 2019</p>
+              <p className="mb-4 text-black">
                 To review material modifications and their effective dates scroll to the bottom of
                 the page.
               </p>
-              <div className="space-y-4 text-gray-700">
+              <div className="space-y-4 text-black leading-tight">
                 <ol className="list-decimal pl-5 space-y-3">
                   <li>
                     <span className="font-semibold">Parties.</span> The parties to these Terms of
@@ -455,7 +458,7 @@ const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
             <div className="border-b border-gray-200 pb-4 mb-4">
               <h2 className="text-2xl font-bold text-gray-800">Privacy Policy</h2>
             </div>
-            <div className="prose max-w-none space-y-4 text-gray-700">
+            <div className="prose max-w-none space-y-4 text-black leading-tight">
               <p className="font-semibold">Effective Date: January 1st, 2019</p>
               <p>
                 To review material modifications and their effective dates scroll to the bottom of
@@ -690,11 +693,11 @@ const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
             <div className="border-b border-gray-200 pb-4 mb-4">
               <h2 className="text-2xl font-bold text-gray-800">Shipping Policy</h2>
             </div>
-            <div className="prose max-w-none space-y-4 text-gray-700">
-              <p className="px-3">
+            <div className="prose max-w-none space-y-4 text-black leading-tight">
+              <p className="px-1">
                 Orders are shipped within 24 hours of placing your order Sunday through Thursday.
               </p>
-              <p className="px-3">
+              <p className="px-1">
                 Orders received Friday, Saturday and Sunday will go out first thing Monday morning.
               </p>
               <p className="px-3">
@@ -714,13 +717,13 @@ const FooterModal: React.FC<FooterModalProps> = ({ modalId, closeModal }) => {
             <div className="border-b border-gray-200 pb-4 mb-4">
               <h2 className="text-2xl font-bold text-gray-800">Returns Policy</h2>
             </div>
-            <div className="prose max-w-none space-y-4 text-gray-700">
-              <p className="px-3">
+            <div className="prose max-w-none space-y-4 text-black leading-tight">
+              <p className="px-1">
                 If you would like to return your purchase for a refund, you must reach out to
                 customer support by either email or phone to receive a return merchandise
                 authorization (RMA).
               </p>
-              <p className="px-3">
+              <p className="px-1">
                 If you return your purchase without a RMA, we can not guarantee you credit. You have
                 up to 365 days from purchase to request a refund. Call{' '}
                 <a href="tel:1-888-526-1885" className="font-bold text-blue-600 hover:underline">

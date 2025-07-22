@@ -34,8 +34,8 @@ export default function CallToAction({
       </div>
       {showTrialText && (
         <div className="text-center my-8">
-          <p className="text-xl md:text-1xl font-semibold leading-normal md:leading-tight text-red-600">
-            <span className="bg-[#ff0] px-1 py-1">
+          <p className="text-xl md:text-1xl font-bold leading-normal md:leading-tight text-[#ff0000]">
+            <span className="bg-[#ff0] px-2 py-1">
               60 Days to Try It Yourself… Love It Or You Don't Pay a Dime!
             </span>
           </p>

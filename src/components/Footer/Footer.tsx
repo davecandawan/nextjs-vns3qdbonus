@@ -206,7 +206,7 @@ const Footer: React.FC = () => {
 
         <div className="flex flex-col items-center">
           <div className="text-lg text-center text-black -mb-1">
-            © 2025 VNSH.com All Rights Reserved.
+            © {new Date().getFullYear()} VNSH.com All Rights Reserved.
           </div>
           <div className="mt-0">
             <FooterLinks loadInfo={loadInfo} />
@@ -215,12 +215,12 @@ const Footer: React.FC = () => {
       </div>
 
       {showModal && (
-        <div 
+        <div
           className={`fixed inset-0 z-50 p-4 pt-20 flex items-start justify-center transition-opacity duration-300 ease-out ${isAnimating ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
           style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
           onClick={closeModal}
         >
-          <div 
+          <div
             className={`bg-white rounded-lg max-w-3xl w-full max-h-[80vh] overflow-y-auto relative p-1 mx-auto transform transition-all duration-300 ease-out ${isAnimating ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'}`}
             onClick={e => e.stopPropagation()}
           >
